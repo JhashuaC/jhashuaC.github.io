@@ -13,10 +13,21 @@ const observer = new IntersectionObserver(
   { threshold: 0.1 }
 );
 
-document.querySelectorAll('.fade-section').forEach(section => {
-  section.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-  observer.observe(section);
+// Hover magnético para botones
+document.querySelectorAll('.magnetic-btn').forEach(btn => {
+  btn.addEventListener('mousemove', function(e) {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+  });
+
+  btn.addEventListener('mouseleave', function() {
+    btn.style.transform = 'translate(0, 0)';
+  });
 });
+
+
 
 // Typewriter animation
 document.addEventListener('DOMContentLoaded', () => {
