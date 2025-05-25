@@ -1,107 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jhashua | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jhashua | Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #1a1a40, #0d0d1a);
       color: #fff;
+      line-height: 1.6;
       padding: 2rem;
     }
-    h1, h2, h3 { color: #00ffc3; }
-    .project, .certificate {
-      background: #26264d;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      transition: 0.3s;
-    }
-    .project:hover, .certificate:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 255, 195, 0.3);
-    }
-    a { color: #00ffc3; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer {
-      margin-top: 4rem;
+
+    header {
       text-align: center;
-      color: #aaa;
+      margin-bottom: 3rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #00ffc3;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+
+    .language-switch button {
+      background-color: #00ffc3;
+      border: none;
+      color: #1a1a40;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .language-switch button:hover {
+      background-color: #00c9a7;
+    }
+
+    section {
+      margin-bottom: 4rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #00ffc3;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #00ffc3;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .project {
+      background-color: #26264d;
+      padding: 2rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(0, 255, 195, 0.5);
+    }
+
+    .project h3 {
+      color: #00ffc3;
+      margin-bottom: 0.8rem;
+    }
+
+    .project p {
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 5rem;
+    }
+
+    a {
+      color: #00ffc3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
+  <script>
+    function toggleLanguage() {
+      window.location.href = "en.html";
+    }
+  </script>
 </head>
 <body>
-  <button onclick="window.location.href='index.html'" style="float:right;background:#00ffc3;color:#1a1a40;border:none;padding:0.5rem 1rem;border-radius:8px;font-weight:bold;cursor:pointer;">🌐 Español</button>
-
-  <h1>👋 Hi, I'm Jhashua</h1>
-  <p>A future systems engineer, passionate about cybersecurity, backend development, and embedded systems. I strive to grow constantly by combining academic theory with real-world projects and international certifications.</p>
-
-  <h2>🔍 Currently Learning</h2>
-  <p>Ethical hacking, network traffic analysis, operating systems, and databases.</p>
-
-  <h2>💡 Featured Projects</h2>
-
-  <div class="project">
-    <h3>🔐 Arduino XOR Encryption System</h3>
-    <p>A secure embedded system with binary inputs and XOR encryption between two Arduinos.</p>
+  <div class="language-switch">
+    <button onclick="toggleLanguage()">🌐 English</button>
   </div>
 
-  <div class="project">
-    <h3>🧠 Network Traffic Analysis with Wireshark and Snort</h3>
-    <p>Monitoring IoT networks to detect threats using packet inspection and custom rules.</p>
-  </div>
+  <header>
+    <h1>👋 ¡Hola, soy Jhashua!</h1>
+    <p>Futuro ingeniero en sistemas, apasionado por la ciberseguridad, el desarrollo backend y los sistemas embebidos.</p>
+    <p>Me esfuerzo por crecer constantemente, combinando teoría con práctica en proyectos reales y certificaciones internacionales.</p>
+  </header>
 
-  <div class="project">
-    <h3>🧰 REST API with Node.js and MySQL</h3>
-    <p>Academic management system backend using RESTful endpoints and relational DBs.</p>
-  </div>
+  <section>
+    <h2 class="section-title">🔍 Aprendiendo actualmente</h2>
+    <p>Hacking ético, análisis de tráfico de red, sistemas operativos y bases de datos.</p>
+  </section>
 
-  <h2>📜 Certifications</h2>
+  <section>
+    <h2 class="section-title">💡 Proyectos destacados</h2>
 
-  <div class="certificate">
-    <h3><a href="https://www.coursera.org/account/accomplishments/certificate" target="_blank">Google Cybersecurity Certificate (2025)</a></h3>
-    <p>Cybersecurity fundamentals, risk management, and security operations.</p>
-  </div>
+    <div class="project" onclick="window.open('https://github.com/Jhashua/arduino-xor-verification', '_blank')">
+      <h3>🔐 Verificación con Arduinos y cifrado XOR</h3>
+      <p>Seguridad embebida entre dos Arduinos, usando entradas binarias encriptadas con XOR.</p>
+    </div>
 
-  <div class="certificate">
-    <h3>IBM Cybersecurity Analyst Certificate (2025)</h3>
-    <p>Hands-on SIEM, incident response, threat hunting, and network defense.</p>
-  </div>
+    <div class="project" onclick="window.open('https://github.com/Jhashua/wireshark-snort-iot', '_blank')">
+      <h3>🧠 Análisis de tráfico con Wireshark y Snort</h3>
+      <p>Detección de amenazas en redes IoT mediante análisis de paquetes y reglas personalizadas.</p>
+    </div>
 
-  <div class="certificate">
-    <h3>Microsoft Cybersecurity Analyst Certificate (2025)</h3>
-    <p>Threat protection, compliance, and data security practices.</p>
-  </div>
+    <div class="project" onclick="window.open('https://github.com/Jhashua/api-rest-cursos', '_blank')">
+      <h3>🧰 API REST con Node.js y MySQL</h3>
+      <p>Backend para gestión académica, con endpoints RESTful y base de datos relacional segura.</p>
+    </div>
 
-  <div class="certificate">
-    <h3>Akamai Network Engineering Certificate (2025)</h3>
-    <p>Network fundamentals, internet performance, and security optimization.</p>
-  </div>
+    <div class="project">
+      <h3>🔧 Proyecto en desarrollo</h3>
+      <p>Espacio reservado para un nuevo proyecto emocionante en el área de redes o automatización.</p>
+    </div>
 
-  <div class="certificate">
-    <h3>IBM Generative AI for Cybersecurity (2025)</h3>
-    <p>Applied generative AI models to cybersecurity scenarios and automation.</p>
-  </div>
+    <div class="project">
+      <h3>📊 Proyecto en desarrollo</h3>
+      <p>Próximamente compartiré un trabajo enfocado en visualización de datos y ciberseguridad.</p>
+    </div>
 
-  <div class="certificate">
-    <h3>Mastercard Cybersecurity Virtual Experience (2025)</h3>
-    <p>Security awareness simulation, phishing threat analysis, and employee training design.</p>
-  </div>
+    <div class="project">
+      <h3>⚙️ Proyecto en desarrollo</h3>
+      <p>Este será un proyecto con integración de IA generativa y herramientas ofensivas defensivas.</p>
+    </div>
+  </section>
 
-  <div class="certificate">
-    <h3><a href="Resume_Jhashua_Canton_Ruiz .pdf" download>📄 Download Resume (PDF)</a></h3>
-    <p>Click to get the latest version of my professional resume.</p>
-  </div>
+  <section>
+    <h2 class="section-title">📜 Certificados</h2>
 
-  <h2>📫 Contact</h2>
-  <p><a href="https://linkedin.com/in/jhashua-canton" target="_blank">LinkedIn</a> | <a href="mailto:jhashua10@gmail.com">Email</a></p>
+    <div class="project">
+      <h3><a href="https://www.coursera.org/account/accomplishments/certificate" target="_blank">🎓 Google Cybersecurity Certificate (2025)</a></h3>
+      <p>Fundamentos de ciberseguridad, gestión de riesgos y operaciones de seguridad.</p>
+    </div>
+
+    <div class="project">
+      <h3>🎓 IBM Cybersecurity Analyst Certificate (2025)</h3>
+      <p>SIEM, respuesta a incidentes, defensa de red y búsqueda de amenazas.</p>
+    </div>
+
+    <div class="project">
+      <h3>🎓 Microsoft Cybersecurity Analyst (2025)</h3>
+      <p>Protección contra amenazas, cumplimiento y gestión de la información.</p>
+    </div>
+
+    <div class="project">
+      <h3>🎓 Akamai Network Engineering Certificate (2025)</h3>
+      <p>Optimización del rendimiento en internet y fundamentos de redes seguras.</p>
+    </div>
+
+    <div class="project">
+      <h3>🎓 IBM Generative AI for Cybersecurity (2025)</h3>
+      <p>Aplicación de modelos de IA generativa en ciberseguridad y automatización.</p>
+    </div>
+
+    <div class="project">
+      <h3>🎓 Mastercard Cybersecurity Virtual Experience (2025)</h3>
+      <p>Simulación de rol como analista en el equipo de concienciación de seguridad de Mastercard.</p>
+    </div>
+
+    <div class="project">
+      <h3>📄 <a href="Resume_Jhashua_Canton_Ruiz .pdf" download>Descargar CV en PDF</a></h3>
+      <p>Haz clic para obtener una copia actualizada de mi currículum profesional.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">📫 Contáctame</h2>
+    <p><a href="https://linkedin.com/in/jhashua-canton" target="_blank">LinkedIn</a> | <a href="mailto:jhashua10@gmail.com">Correo electrónico</a></p>
+  </section>
 
   <footer>
-    ⚡ First in my family to attend university. Always learning, always building.<br>
-    © 2025 Jhashua | All rights reserved
+    ⚡ Primer universitario en mi familia. Amante de los desafíos técnicos y de compartir conocimiento.<br />
+    © 2025 Jhashua | Todos los derechos reservados
   </footer>
 </body>
 </html>
