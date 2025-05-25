@@ -53,3 +53,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   typeLoop();
 });
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectItems = document.querySelectorAll('.project');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.getAttribute('data-filter');
+
+    // Botón activo visualmente
+    filterButtons.forEach(btn => btn.classList.remove('bg-teal-400', 'text-gray-900'));
+    button.classList.add('bg-teal-400', 'text-gray-900');
+
+    // Filtrado animado
+    projectItems.forEach(item => {
+      const match = item.classList.contains(`category-${filter}`);
+
+      if (filter === 'all' || match) {
+        item.classList.remove('opacity-0', 'scale-95', 'hidden');
+        item.classList.add('opacity-100', 'scale-100');
+      } else {
+        item.classList.remove('opacity-100', 'scale-100');
+        item.classList.add('opacity-0', 'scale-95');
+        setTimeout(() => item.classList.add('hidden'), 300);
+      }
+    });
+  });
+});
