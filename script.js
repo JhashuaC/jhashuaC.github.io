@@ -80,3 +80,22 @@ filterButtons.forEach(button => {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const skillSection = document.querySelector('#skills');
+
+  if (skillSection) {
+    const skillObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.skill-bar').forEach(bar => {
+            const width = bar.getAttribute('data-width');
+            bar.style.width = width;
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    skillObserver.observe(skillSection);
+  }
+});
