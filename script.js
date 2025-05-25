@@ -99,3 +99,20 @@ document.addEventListener('DOMContentLoaded', () => {
     skillObserver.observe(skillSection);
   }
 });
+// Timeline slide-in animation
+document.addEventListener('DOMContentLoaded', () => {
+  const timelineEntries = document.querySelectorAll('.timeline-entry');
+  const timelineObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('opacity-0', 'translate-x-10');
+        entry.target.classList.add('opacity-100', 'translate-x-0');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  timelineEntries.forEach(entry => {
+    timelineObserver.observe(entry);
+  });
+});
