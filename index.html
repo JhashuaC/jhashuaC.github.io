@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jhashua | Portafolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jhashua | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -38,27 +38,6 @@
       color: #ccc;
       max-width: 800px;
       margin: 0 auto;
-    }
-
-    .language-switch {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-    }
-
-    .language-switch button {
-      background-color: #00ffc3;
-      border: none;
-      color: #1a1a40;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .language-switch button:hover {
-      background-color: #00c9a7;
     }
 
     section {
@@ -128,84 +107,74 @@
       100% { opacity: 1; transform: translateY(0); }
     }
   </style>
-  <script>
-    function toggleLanguage() {
-      window.location.href = "en.html";
-    }
-  </script>
 </head>
 <body>
-  <div class="language-switch">
-    <button onclick="toggleLanguage()">🌐 English</button>
-  </div>
-
   <header>
-    <h1>👋 ¡Hola! Soy Jhashua Canton Ruiz</h1>
-    <p>Estudiante de Ingeniería en Sistemas en la Universidad Nacional de Costa Rica, con enfoque en ciberseguridad, desarrollo backend y sistemas embebidos. Me destaco por el compromiso, la autodisciplina y la pasión por aprender constantemente mediante proyectos reales y certificaciones internacionales.</p>
+    <h1>👋 Hi! I'm Jhashua Canton Ruiz</h1>
+    <p>Systems Engineering student at the National University of Costa Rica, focused on cybersecurity, backend development, and embedded systems. I am known for my commitment, self-discipline, and passion for continuous learning through real projects and international certifications.</p>
   </header>
 
   <section>
-    <h2 class="section-title">🔍 Áreas de Interés</h2>
-    <p>Hacking ético, análisis de tráfico de red, sistemas operativos, inteligencia artificial aplicada a la seguridad, desarrollo de APIs y automatización.</p>
+    <h2 class="section-title">🔍 Areas of Interest</h2>
+    <p>Ethical hacking, network traffic analysis, operating systems, artificial intelligence applied to security, API development, and automation.</p>
   </section>
 
   <section>
-    <h2 class="section-title">💡 Proyectos</h2>
+    <h2 class="section-title">💡 Projects</h2>
     <div class="project-grid">
 
       <div class="project" onclick="window.open('https://github.com/Jhashua/arduino-xor-verification', '_blank')">
-        <h3>🔐 Sistema de Autenticación con Arduino y XOR</h3>
-        <p>Implementación de un sistema de verificación entre dos Arduinos usando entrada binaria y cifrado XOR.</p>
+        <h3>🔐 Arduino XOR Authentication System</h3>
+        <p>A verification system between two Arduinos using binary input and XOR encryption.</p>
       </div>
 
       <div class="project" onclick="window.open('https://github.com/Jhashua/wireshark-snort-iot', '_blank')">
-        <h3>🧠 Análisis de Tráfico IoT con Snort</h3>
-        <p>Monitoreo de paquetes en redes IoT mediante Wireshark y reglas de Snort personalizadas.</p>
+        <h3>🧠 IoT Traffic Analysis with Snort</h3>
+        <p>Monitoring IoT networks with Wireshark and custom Snort rules.</p>
       </div>
 
       <div class="project" onclick="window.open('https://github.com/Jhashua/api-rest-cursos', '_blank')">
-        <h3>🧰 API RESTful para Gestión Académica</h3>
-        <p>Backend con Node.js y MySQL para administración de usuarios, roles, cursos y conferencistas.</p>
+        <h3>🧰 RESTful API for Academic Management</h3>
+        <p>Backend system using Node.js and MySQL for managing users, roles, courses, and speakers.</p>
       </div>
 
       <div class="project">
-        <h3>🌐 Plataforma de Certificados Interactivos</h3>
-        <p>Proyecto en desarrollo que permite generar y verificar certificados académicos mediante tokens digitales.</p>
+        <h3>🌐 Interactive Certificate Platform</h3>
+        <p>Project in progress to generate and verify academic certificates using digital tokens.</p>
       </div>
 
     </div>
   </section>
 
   <section>
-  <h2 class="section-title">📜 Certificaciones</h2>
+  <h2 class="section-title">📜 Certifications</h2>
 
-  <h3 class="section-title">🔐 Ciberseguridad</h3>
+  <h3 class="section-title">🔐 Cybersecurity</h3>
   <div class="project-grid">
-    <div class="project"><h3>Curso de Ciberseguridad en Coursera</h3><a href="certificados/Ciberseguridad/Coursera 2GKTX1V6L9L7.pdf" target="_blank">Ver PDF</a></div>
-    <div class="project"><h3>Hacking Ético</h3><a href="certificados/Ciberseguridad/hackin_etico.pdf" target="_blank">Ver PDF</a></div>
-    <div class="project"><h3>Mastercard Cybersecurity</h3><a href="certificados/Ciberseguridad/mastercard.pdf" target="_blank">Ver PDF</a></div>
+    <div class="project"><h3>Cybersecurity Course (Coursera)</h3><a href="certificados/Ciberseguridad/Coursera 2GKTX1V6L9L7.pdf" target="_blank">View PDF</a></div>
+    <div class="project"><h3>Ethical Hacking</h3><a href="certificados/Ciberseguridad/hackin_etico.pdf" target="_blank">View PDF</a></div>
+    <div class="project"><h3>Mastercard Cybersecurity</h3><a href="certificados/Ciberseguridad/mastercard.pdf" target="_blank">View PDF</a></div>
   </div>
 
-  <h3 class="section-title">🌐 Redes</h3>
+  <h3 class="section-title">🌐 Networking</h3>
   <div class="project-grid">
-    <div class="project"><h3>Certificado Cisco</h3><a href="certificados/Redes/certificado_cisco.pdf" target="_blank">Ver PDF</a></div>
-    <div class="project"><h3>Akamai Network Engineering</h3><a href="certificados/Redes/akamai.pdf" target="_blank">Ver PDF</a></div>
+    <div class="project"><h3>Cisco Certificate</h3><a href="certificados/Redes/certificado_cisco.pdf" target="_blank">View PDF</a></div>
+    <div class="project"><h3>Akamai Network Engineering</h3><a href="certificados/Redes/akamai.pdf" target="_blank">View PDF</a></div>
   </div>
 
-  <h3 class="section-title">🤖 IA y Automatización</h3>
+  <h3 class="section-title">🤖 AI & Automation</h3>
   <div class="project-grid">
-    <div class="project"><h3>IA Generativa en Seguridad</h3><a href="certificados/IA y Automatización/2ZFnEGEDKTQMtEv9C_4nAmAbTbHbnGMNSyo_9tpGvitoQ2DrwBZRa_1745258518137_completion_certificate.pdf" target="_blank">Ver PDF</a></div>
+    <div class="project"><h3>Generative AI for Security</h3><a href="certificados/IA y Automatización/2ZFnEGEDKTQMtEv9C_4nAmAbTbHbnGMNSyo_9tpGvitoQ2DrwBZRa_1745258518137_completion_certificate.pdf" target="_blank">View PDF</a></div>
   </div>
 
-  <h3 class="section-title">📁 Otros</h3>
+  <h3 class="section-title">📁 Others</h3>
   <div class="project-grid">
-    <div class="project"><h3>Certificado Extra</h3><a href="certificados/Otros/certificado4.pdf" target="_blank">Ver PDF</a></div>
+    <div class="project"><h3>Additional Certificate</h3><a href="certificados/Otros/certificado4.pdf" target="_blank">View PDF</a></div>
   </div>
 </section>
 
-
   <footer>
-    ⚡ Primer universitario en mi familia. Amante de los desafíos técnicos y del aprendizaje continuo.<br />
+    ⚡ First-generation university student. Passionate about technical challenges and lifelong learning.<br />
     © 2025 Jhashua Canton Ruiz
   </footer>
 </body>
