@@ -13,7 +13,7 @@ const observer = new IntersectionObserver(
   { threshold: 0.1 }
 );
 
-// Hover magnético para botones
+
 document.querySelectorAll('.magnetic-btn').forEach(btn => {
   btn.addEventListener('mousemove', function(e) {
     const rect = btn.getBoundingClientRect();
