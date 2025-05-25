@@ -29,7 +29,7 @@ document.querySelectorAll('.magnetic-btn').forEach(btn => {
 
 
 
-// Typewriter animation
+
 document.addEventListener('DOMContentLoaded', () => {
   const roles = ['Cybersecurity Enthusiast', 'Backend Developer', 'IoT Hacker', 'REST API Developer'];
   let i = 0, j = 0, isDeleting = false;
