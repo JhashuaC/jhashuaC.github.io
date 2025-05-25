@@ -23,19 +23,21 @@
 
     header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
       animation: fadeIn 1.5s ease-in-out;
     }
 
     header h1 {
       font-size: 3rem;
       color: #00ffc3;
+      margin-bottom: 1rem;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #ccc;
-      margin-top: 0.5rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .language-switch {
@@ -68,23 +70,26 @@
       font-size: 2rem;
       color: #00ffc3;
       margin-bottom: 1.5rem;
-      border-bottom: 2px solid #00ffc3;
-      display: inline-block;
-      padding-bottom: 0.3rem;
+      border-left: 5px solid #00ffc3;
+      padding-left: 0.5rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
     }
 
     .project {
       background-color: #26264d;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 15px;
-      margin-bottom: 2rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-      cursor: pointer;
     }
 
     .project:hover {
-      transform: translateY(-8px);
+      transform: scale(1.05);
       box-shadow: 0 6px 20px rgba(0, 255, 195, 0.5);
     }
 
@@ -135,97 +140,71 @@
   </div>
 
   <header>
-    <h1>👋 ¡Hola, soy Jhashua!</h1>
-    <p>Futuro ingeniero en sistemas, apasionado por la ciberseguridad, el desarrollo backend y los sistemas embebidos.</p>
-    <p>Me esfuerzo por crecer constantemente, combinando teoría con práctica en proyectos reales y certificaciones internacionales.</p>
+    <h1>👋 ¡Hola! Soy Jhashua Canton Ruiz</h1>
+    <p>Estudiante de Ingeniería en Sistemas en la Universidad Nacional de Costa Rica, con enfoque en ciberseguridad, desarrollo backend y sistemas embebidos. Me destaco por el compromiso, la autodisciplina y la pasión por aprender constantemente mediante proyectos reales y certificaciones internacionales.</p>
   </header>
 
   <section>
-    <h2 class="section-title">🔍 Aprendiendo actualmente</h2>
-    <p>Hacking ético, análisis de tráfico de red, sistemas operativos y bases de datos.</p>
+    <h2 class="section-title">🔍 Áreas de Interés</h2>
+    <p>Hacking ético, análisis de tráfico de red, sistemas operativos, inteligencia artificial aplicada a la seguridad, desarrollo de APIs y automatización.</p>
   </section>
 
   <section>
-    <h2 class="section-title">💡 Proyectos destacados</h2>
+    <h2 class="section-title">💡 Proyectos</h2>
+    <div class="project-grid">
 
-    <div class="project" onclick="window.open('https://github.com/Jhashua/arduino-xor-verification', '_blank')">
-      <h3>🔐 Verificación con Arduinos y cifrado XOR</h3>
-      <p>Seguridad embebida entre dos Arduinos, usando entradas binarias encriptadas con XOR.</p>
-    </div>
+      <div class="project" onclick="window.open('https://github.com/Jhashua/arduino-xor-verification', '_blank')">
+        <h3>🔐 Sistema de Autenticación con Arduino y XOR</h3>
+        <p>Implementación de un sistema de verificación entre dos Arduinos usando entrada binaria y cifrado XOR.</p>
+      </div>
 
-    <div class="project" onclick="window.open('https://github.com/Jhashua/wireshark-snort-iot', '_blank')">
-      <h3>🧠 Análisis de tráfico con Wireshark y Snort</h3>
-      <p>Detección de amenazas en redes IoT mediante análisis de paquetes y reglas personalizadas.</p>
-    </div>
+      <div class="project" onclick="window.open('https://github.com/Jhashua/wireshark-snort-iot', '_blank')">
+        <h3>🧠 Análisis de Tráfico IoT con Snort</h3>
+        <p>Monitoreo de paquetes en redes IoT mediante Wireshark y reglas de Snort personalizadas.</p>
+      </div>
 
-    <div class="project" onclick="window.open('https://github.com/Jhashua/api-rest-cursos', '_blank')">
-      <h3>🧰 API REST con Node.js y MySQL</h3>
-      <p>Backend para gestión académica, con endpoints RESTful y base de datos relacional segura.</p>
-    </div>
+      <div class="project" onclick="window.open('https://github.com/Jhashua/api-rest-cursos', '_blank')">
+        <h3>🧰 API RESTful para Gestión Académica</h3>
+        <p>Backend con Node.js y MySQL para administración de usuarios, roles, cursos y conferencistas.</p>
+      </div>
 
-    <div class="project">
-      <h3>🔧 Proyecto en desarrollo</h3>
-      <p>Espacio reservado para un nuevo proyecto emocionante en el área de redes o automatización.</p>
-    </div>
+      <div class="project">
+        <h3>🌐 Plataforma de Certificados Interactivos</h3>
+        <p>Proyecto en desarrollo que permite generar y verificar certificados académicos mediante tokens digitales.</p>
+      </div>
 
-    <div class="project">
-      <h3>📊 Proyecto en desarrollo</h3>
-      <p>Próximamente compartiré un trabajo enfocado en visualización de datos y ciberseguridad.</p>
-    </div>
-
-    <div class="project">
-      <h3>⚙️ Proyecto en desarrollo</h3>
-      <p>Este será un proyecto con integración de IA generativa y herramientas ofensivas defensivas.</p>
     </div>
   </section>
 
   <section>
-    <h2 class="section-title">📜 Certificados</h2>
-
-    <div class="project">
-      <h3><a href="https://www.coursera.org/account/accomplishments/certificate" target="_blank">🎓 Google Cybersecurity Certificate (2025)</a></h3>
-      <p>Fundamentos de ciberseguridad, gestión de riesgos y operaciones de seguridad.</p>
-    </div>
-
-    <div class="project">
-      <h3>🎓 IBM Cybersecurity Analyst Certificate (2025)</h3>
-      <p>SIEM, respuesta a incidentes, defensa de red y búsqueda de amenazas.</p>
-    </div>
-
-    <div class="project">
-      <h3>🎓 Microsoft Cybersecurity Analyst (2025)</h3>
-      <p>Protección contra amenazas, cumplimiento y gestión de la información.</p>
-    </div>
-
-    <div class="project">
-      <h3>🎓 Akamai Network Engineering Certificate (2025)</h3>
-      <p>Optimización del rendimiento en internet y fundamentos de redes seguras.</p>
-    </div>
-
-    <div class="project">
-      <h3>🎓 IBM Generative AI for Cybersecurity (2025)</h3>
-      <p>Aplicación de modelos de IA generativa en ciberseguridad y automatización.</p>
-    </div>
-
-    <div class="project">
-      <h3>🎓 Mastercard Cybersecurity Virtual Experience (2025)</h3>
-      <p>Simulación de rol como analista en el equipo de concienciación de seguridad de Mastercard.</p>
-    </div>
-
-    <div class="project">
-      <h3>📄 <a href="Resume_Jhashua_Canton_Ruiz .pdf" download>Descargar CV en PDF</a></h3>
-      <p>Haz clic para obtener una copia actualizada de mi currículum profesional.</p>
+    <h2 class="section-title">📜 Certificaciones</h2>
+    <div class="project-grid">
+      <div class="project"><h3>Google Cybersecurity Certificate (2025)</h3><p>Fundamentos, gestión de riesgos y operaciones de seguridad.</p></div>
+      <div class="project"><h3>IBM Cybersecurity Analyst Certificate (2025)</h3><p>SIEM, respuesta a incidentes, análisis de amenazas.</p></div>
+      <div class="project"><h3>Microsoft Cybersecurity Analyst (2025)</h3><p>Protección de información y cumplimiento.</p></div>
+      <div class="project"><h3>Akamai Network Engineering (2025)</h3><p>Redes, seguridad web y rendimiento.</p></div>
+      <div class="project"><h3>IBM Generative AI in Cybersecurity (2025)</h3><p>IA generativa aplicada a problemas de ciberseguridad.</p></div>
+      <div class="project"><h3>Mastercard Cybersecurity Experience (2025)</h3><p>Simulación de análisis y concienciación sobre seguridad.</p></div>
     </div>
   </section>
 
   <section>
-    <h2 class="section-title">📫 Contáctame</h2>
-    <p><a href="https://linkedin.com/in/jhashua-canton" target="_blank">LinkedIn</a> | <a href="mailto:jhashua10@gmail.com">Correo electrónico</a></p>
+    <h2 class="section-title">📄 CV y Contacto</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3><a href="Resume_Jhashua_Canton_Ruiz .pdf" download>Descargar CV en PDF</a></h3>
+        <p>Versión actualizada de mi currículum profesional.</p>
+      </div>
+      <div class="project">
+        <h3>Contacto</h3>
+        <p><a href="mailto:jhashua10@gmail.com">jhashua10@gmail.com</a><br><a href="https://linkedin.com/in/jhashua-canton" target="_blank">LinkedIn</a></p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    ⚡ Primer universitario en mi familia. Amante de los desafíos técnicos y de compartir conocimiento.<br />
-    © 2025 Jhashua | Todos los derechos reservados
+    ⚡ Primer universitario en mi familia. Amante de los desafíos técnicos y del aprendizaje continuo.<br />
+    © 2025 Jhashua Canton Ruiz
   </footer>
 </body>
 </html>
