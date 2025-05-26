@@ -144,3 +144,20 @@ document.addEventListener('DOMContentLoaded', () => {
  
  
 });
+function zoomImage(src) {
+  const modal = document.getElementById('imgZoomModal');
+  const img = document.getElementById('zoomedImg');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  img.src = src;
+}
+
+// Cierra el modal de imagen ampliada si se hace clic fuera de la imagen
+document.getElementById('imgZoomModal').addEventListener('click', function (e) {
+  if (e.target.id === 'imgZoomModal') {
+    this.classList.remove('flex');
+    this.classList.add('hidden');
+    document.getElementById('zoomedImg').src = '';
+  }
+});
+
