@@ -116,3 +116,19 @@ document.addEventListener('DOMContentLoaded', () => {
     timelineObserver.observe(entry);
   });
 });
+// Profile image modal functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const profileImage = document.getElementById('profileImage');
+  const imageModal = document.getElementById('imageModal');
+  const closeModalBtn = document.getElementById('closeModal');
+
+  profileImage.addEventListener('click', () => {
+    imageModal.classList.remove('hidden');
+    imageModal.classList.add('flex');
+  });
+
+  closeModalBtn.addEventListener('click', () => {
+    imageModal.classList.remove('flex');
+    imageModal.classList.add('hidden');
+  });
+});

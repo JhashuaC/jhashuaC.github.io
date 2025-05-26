@@ -47,14 +47,17 @@
 
     <!-- Profile Image -->
     <div class="flex-shrink-0">
-      <img src="img/profile.jpg" alt="Jhashua Portrait" class="rounded-xl shadow-xl w-60 grayscale hover:grayscale-0 hover:scale-105 transition duration-700 ease-in-out" />
+      <img src="img/profile.jpg"
+           alt="Jhashua Portrait"
+           class="rounded-xl shadow-xl w-60 grayscale hover:grayscale-0 hover:scale-105 transition duration-700 ease-in-out cursor-pointer"
+           id="profileImage" />
     </div>
 
     <!-- Description -->
     <div class="text-center md:text-left">
       <h2 class="text-4xl font-bold text-teal-400 mb-4">About Me</h2>
       <p class="text-gray-300 text-lg leading-relaxed">
-        I'm Jhashua Canton Ruiz, a passionate Computer Engineering student at Universidad Nacional de Costa Rica. I specialize in cybersecurity, backend development with Node.js, and IoT systems using Arduino. My journey is fueled by a love for technology and a commitment to ethical practices in the digital world.
+        I'm Jhashua, a systems engineering student passionate about cybersecurity, backend development, and embedded systems. As the first person in my family to pursue university studies, I've built real-world projects combining academic theory and practical skills. I enjoy exploring ethical hacking, network analysis, and developing secure IoT systems with tools like Arduino, Wireshark, and Node.js.
       </p>
       <p class="text-gray-400 mt-4">Always learning. Always building.</p>
     </div>
@@ -62,6 +65,20 @@
   </div>
 </section>
 
+<!-- Modal -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+  <span id="closeModal" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
+  <img src="img/profile.jpg" alt="Full size portrait"
+       class="max-w-full max-h-[90vh] rounded-xl shadow-2xl border-4 border-teal-400">
+</div>
+
+
+<!-- Modal -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+  <span onclick="closeModal()" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
+  <img src="img/profile.jpg" alt="Full size portrait"
+       class="max-w-full max-h-[90vh] rounded-xl shadow-2xl border-4 border-teal-400">
+</div>
   <!-- Projects Section -->
   <section id="projects" class="py-20 fade-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
