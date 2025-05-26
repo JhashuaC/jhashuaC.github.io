@@ -141,8 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Cargar Credly embed script DESPUÉS de que estén en el DOM
-  const credlyScript = document.createElement('script');
-  credlyScript.src = 'https://cdn.credly.com/assets/utilities/embed.js';
-  credlyScript.async = true;
-  document.body.appendChild(credlyScript);
+ 
+ 
 });
