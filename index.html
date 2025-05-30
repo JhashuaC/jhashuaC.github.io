@@ -1,379 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jhashua | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhashua | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 
 </head>
 >
 
 <body class="bg-gradient-to-br from-blue-900 to-gray-900 text-white font-sans">
 
-  <!-- Navbars -->
-  <nav class="fixed inset-x-0 top-0 bg-gray-800 bg-opacity-50 backdrop-blur-md z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="#home" class="text-2xl font-bold text-teal-400">Jhashua</a>
-        <div class="hidden md:flex space-x-4">
-          <a href="#home" class="hover:text-teal-300">Home</a>
-              <a href="#about" class="hover:text-teal-300">About me</a>
-          <a href="#projects" class="hover:text-teal-300">Projects</a>
-          <a href="#certifications" class="hover:text-teal-300">Certifications</a>
-          <a href="#skills" class="hover:text-teal-300">Skills</a>
-          <a href="#timeline" class="hover:text-teal-300">Education & Experience</a>
-          <a href="#contact" class="hover:text-teal-300">Contact</a>
-           
+    <!-- Navbars -->
+    <nav class="fixed inset-x-0 top-0 bg-gray-800 bg-opacity-50 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="text-2xl font-bold text-teal-400">Jhashua</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#home" class="hover:text-teal-300">Home</a>
+                    <a href="#about" class="hover:text-teal-300">About me</a>
+                    <a href="#projects" class="hover:text-teal-300">Projects</a>
+                    <a href="#certifications" class="hover:text-teal-300">Certifications</a>
+                    <a href="#skills" class="hover:text-teal-300">Skills</a>
+                    <a href="#timeline" class="hover:text-teal-300">Education & Experience</a>
+                    <a href="#contact" class="hover:text-teal-300">Contact</a>
+
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
-  <div>
-    <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">Hi, I'm <span class="text-teal-400">Jhashua</span></h1>
-    <p id="typewriter" class="text-2xl text-teal-300 h-10 mb-6 font-mono"></p>
-    <a href="#contact" class="magnetic-btn bg-teal-400 hover:bg-teal-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition">Get In Touch</a>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
+        <div>
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">Hi, I'm <span class="text-teal-400">Jhashua</span></h1>
+            <p id="typewriter" class="text-2xl text-teal-300 h-10 mb-6 font-mono"></p>
+            <a href="#contact" class="magnetic-btn bg-teal-400 hover:bg-teal-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition">Get In Touch</a>
 
-  </div>
-</section>
-
-<!-- About Me Section -->
-<section id="about" class="py-20 bg-gradient-to-r from-gray-900 to-blue-950 fade-section">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
-
-    <!-- Profile Image -->
-    <div class="flex-shrink-0">
-      <img src="img/profile.jpg"
-           alt="Jhashua Portrait"
-           class="rounded-xl shadow-xl w-60 grayscale hover:grayscale-0 hover:scale-105 transition duration-700 ease-in-out cursor-pointer"
-           id="profileImage" />
-    </div>
-
-    <!-- Description -->
-    <div class="text-center md:text-left">
-      <h2 class="text-4xl font-bold text-teal-400 mb-4">About Me</h2>
-      <p class="text-gray-300 text-lg leading-relaxed">
-        I'm Jhashua, a systems engineering student passionate about cybersecurity, backend development, and embedded systems. As the first person in my family to pursue university studies, I've built real-world projects combining academic theory and practical skills. I enjoy exploring ethical hacking, network analysis, and developing secure IoT systems with tools like Arduino, Wireshark, and Node.js.
-      </p>
-      <p class="text-gray-400 mt-4">Always learning. Always building.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- Modal -->
-<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
-  <span id="closeModal" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
-  <img src="img/profile.jpg" alt="Full size portrait"
-       class="max-w-full max-h-[90vh] rounded-xl shadow-2xl border-4 border-teal-400">
-</div>
-
-
-<!-- Modal -->
-<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
-  <span onclick="closeModal()" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
-  <img src="img/profile.jpg" alt="Full size portrait"
-       class="max-w-full max-h-[90vh] rounded-xl shadow-2xl border-4 border-teal-400">
-</div>
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 fade-section">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl font-bold text-teal-400 mb-8 text-center">Featured Projects</h2>
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
-          <h3 class="text-2xl font-semibold text-teal-300 mb-2">Arduino XOR Authentication</h3>
-          <p class="text-gray-300 mb-4">Verification system between two Arduinos using binary inputs and XOR encryption.</p>
-          <a href="https://github.com/Jhashua/arduino-xor-verification" target="_blank" class="text-teal-400 hover:underline">View on GitHub →</a>
         </div>
-        <div class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
-          <h3 class="text-2xl font-semibold text-teal-300 mb-2">IoT Traffic Analysis</h3>
-          <p class="text-gray-300 mb-4">Monitoring IoT networks with Wireshark and custom Snort rules to detect anomalies.</p>
-          <a href="https://github.com/Jhashua/wireshark-snort-iot" target="_blank" class="text-teal-400 hover:underline">View on GitHub →</a>
-        </div>
-        <div class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
-          <h3 class="text-2xl font-semibold text-teal-300 mb-2">RESTful API Academic</h3>
-          <p class="text-gray-300 mb-4">Node.js & MySQL backend for managing users, roles, courses, and speakers.</p>
-          <a href="https://github.com/Jhashua/api-rest-cursos" target="_blank" class="text-teal-400 hover:underline">View on GitHub →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-<!-- Certifications Section -->
-<section id="certifications" class="py-20 bg-gradient-to-r from-blue-950 via-gray-900 to-blue-950">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-4xl font-bold text-teal-400 mb-8 text-center">Certifications</h2>
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-gradient-to-r from-gray-900 to-blue-950 fade-section">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
 
-    <!-- Filters -->
-    <div class="flex flex-wrap justify-center gap-4 mb-8">
-      <button class="filter-btn px-4 py-2 bg-teal-400 text-gray-900 font-semibold rounded hover:bg-teal-500 transition" data-filter="all">All</button>
-      <button class="filter-btn px-4 py-2 bg-gray-700 font-semibold rounded hover:bg-teal-500 transition" data-filter="cyber">Cybersecurity</button>
-      <button class="filter-btn px-4 py-2 bg-gray-700 font-semibold rounded hover:bg-teal-500 transition" data-filter="network">Networking</button>
-      <button class="filter-btn px-4 py-2 bg-gray-700 font-semibold rounded hover:bg-teal-500 transition" data-filter="ai">AI & Automation</button>
+            <!-- Profile Image -->
+            <div class="flex-shrink-0">
+                <img src="img/profile.jpg" alt="Jhashua Portrait" class="rounded-xl shadow-xl w-60 grayscale hover:grayscale-0 hover:scale-105 transition duration-700 ease-in-out cursor-pointer" id="profileImage" />
+            </div>
+
+            <!-- Description -->
+            <div class="text-center md:text-left">
+                <h2 class="text-4xl font-bold text-teal-400 mb-4">About Me</h2>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    I'm Jhashua, a systems engineering student passionate about cybersecurity, backend development, and embedded systems. As the first person in my family to pursue university studies, I've built real-world projects combining academic theory and practical
+                    skills. I enjoy exploring ethical hacking, network analysis, and developing secure IoT systems with tools like Arduino, Wireshark, and Node.js.
+                </p>
+                <p class="text-gray-400 mt-4">Always learning. Always building.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+        <span id="closeModal" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
+        <img src="img/profile.jpg" alt="Full size portrait" class="max-w-full max-h-[90vh] rounded-xl shadow-2xl border-4 border-teal-400">
     </div>
 
-    <!-- Grid -->
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-      <!-- Cybersecurity -->
-      <!-- Cybersecurity -->
-      <div class="project category-cyber group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-        <img src="img/Google.jpg" alt="AI for Cybersecurity"
-     class="max-h-full max-w-full object-contain cursor-pointer"
-     ondblclick="zoomImage(this.src)" />
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
-          <h4 class="text-lg font-semibold">Google Cybersecurity</h4>
-          <a href="https://www.credly.com/badges/bcf03150-6723-4db1-9edc-6a0674373643/public_url" target="_blank" class="underline">View Badge</a>
-        </div>
-        
-
-      </div>
-
-      <div class="project category-cyber group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-        <img src="img/IBM.jpg" alt="AI for Cybersecurity"
-     class="max-h-full max-w-full object-contain cursor-pointer"
-     ondblclick="zoomImage(this.src)" />
-
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
-          <h4 class="text-lg font-semibold">IBM Cybersecurity Analyst</h4>
-          <a href="https://www.credly.com/badges/ff1a0291-580c-4dda-9abd-bee2a501fab1/public_url" target="_blank" class="underline">View Badge</a>
-        </div>
-      </div>
-
-  <div class="project category-cyber group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-       <img src="img/CiscoEthicalHacking.jpg" alt="AI for Cybersecurity"
-     class="max-h-full max-w-full object-contain cursor-pointer"
-     ondblclick="zoomImage(this.src)" />
-
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
-          <h4 class="text-lg font-semibold">Ethical Hacking</h4>
-          <a href="https://www.credly.com/badges/ad2ec193-758a-4e67-8565-48ada4df6df6/public_url" target="_blank" class="underline text-teal-300">View Badge</a>
-        </div>
-      </div>
-
-      <div class="project category-cyber group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-        <img src="img/Mastercard.jpg" alt="AI for Cybersecurity"
-     class="max-h-full max-w-full object-contain cursor-pointer"
-     ondblclick="zoomImage(this.src)" />
-
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
-          <h4 class="text-lg font-semibold">Mastercard Job Experience</h4>
-          <a href="certificados/Ciberseguridad/Mastercard.pdf" target="_blank" class="underline">View PDF</a>
-        </div>
-      </div>
-       <div class="project category-cyber group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-        <img src="img/Microsoft.jpg" alt="AI for Cybersecurity"
-     class="max-h-full max-w-full object-contain cursor-pointer"
-     ondblclick="zoomImage(this.src)" />
-
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
-          <h4 class="text-lg font-semibold">Microsoft Cybersecurity</h4>
-          <a href="https://www.credly.com/badges/09c1abf1-c7e2-4f30-8286-6850d2edf914/public_url" target="_blank" class="underline">View Badge</a>
-        </div>
-      </div>
-
-  
-      <div class="project category-network group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-        <img src="img/CiscoPath.jpg" alt="AI for Cybersecurity"
-     class="max-h-full max-w-full object-contain cursor-pointer"
-     ondblclick="zoomImage(this.src)" />
-
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
-          <h4 class="text-lg font-semibold">Cisco Certificate Cybersecurity</h4>
-          <a href="https://www.credly.com/badges/5baf6daf-76c4-4a36-b3a8-637858ada6b3/public_url" target="_blank" class="underline text-teal-300">View Badge</a>
-        </div>
-      </div>
-
-      <div class="project category-network group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-        <img src="img/AkamaiEngineering.jpg" alt="AI for Cybersecurity"
-     class="max-h-full max-w-full object-contain cursor-pointer"
-  
-     ondblclick="zoomImage(this.src)" />
-
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
-          <h4 class="text-lg font-semibold">Akamai Network Engineering</h4>
-          <a href="certificados/Redes/AkamaiEngineering.pdf" target="_blank" class="underline text-teal-300">View PDF</a>
-        </div>
-      </div>
- <div class="project category-network group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-        <img src="img/advancedNetwork.jpg" alt="AI for Cybersecurity"
-     class="max-h-full max-w-full object-contain cursor-pointer"
-     ondblclick="zoomImage(this.src)" />
-
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
-          <h4 class="text-lg font-semibold">Advanced Network Security</h4>
-            <a href="certificados/Redes/NetworkSecurity.pdf" target="_blank" class="underline text-teal-300">View PDF</a>
-        </div>
-      </div>
-
-
-      <!-- AI & Automation -->
-      <div class="project category-ai group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-        <img src="img/IBMGenerativeAI.jpg" alt="AI for Cybersecurity"
-     class="max-h-full max-w-full object-contain cursor-pointer"
-     ondblclick="zoomImage(this.src)" />
-
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
-          <h4 class="text-lg font-semibold">Generative AI Security</h4>
-          <a href="https://www.credly.com/badges/f1a86a8e-133a-4c1e-963d-9de47c9f4fc3/public_url" target="_blank" class="underline text-teal-300">View Badge</a>
-        </div>
-      </div>
-<div class="project category-ai group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-        <img src="img/AIForCybersecurity.jpg" alt="AI for Cybersecurity"
-     class="max-h-full max-w-full object-contain cursor-pointer"
-     ondblclick="zoomImage(this.src)" />
-
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
-          <h4 class="text-lg font-semibold">Generative AI Security</h4>
-          <a href="https://www.credly.com/badges/f1a86a8e-133a-4c1e-963d-9de47c9f4fc3/public_url" target="_blank" class="underline text-teal-300">View Badge</a>
-        </div>
-      </div>
-    
-</div>
-
-
-
+    <!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+        <span onclick="closeModal()" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
+        <img src="img/profile.jpg" alt="Full size portrait" class="max-w-full max-h-[90vh] rounded-xl shadow-2xl border-4 border-teal-400">
     </div>
-  </div>
-</section>
-
-<!-- Lightbox Script -->
-<div id="certModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
-  <span onclick="closeCertificate()" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
-  <iframe id="certFrame" class="w-[90%] h-[85vh] rounded-xl shadow-2xl border-4 border-teal-400 bg-white" frameborder="0"></iframe>
-</div>
-
-<!-- Skills Section -->
-<section id="skills" class="py-20 bg-gradient-to-r from-gray-900 to-blue-950 fade-section">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-4xl font-bold text-teal-400 mb-10 text-center">Skills</h2>
-    <div class="space-y-6">
-
-      <div>
-        <h3 class="text-teal-300 font-semibold mb-1">Cybersecurity</h3>
-        <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
-          <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="85%" style="width: 0"></div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 fade-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-teal-400 mb-8 text-center">Featured Projects</h2>
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <h3 class="text-2xl font-semibold text-teal-300 mb-2">Arduino XOR Authentication</h3>
+                    <p class="text-gray-300 mb-4">Verification system between two Arduinos using binary inputs and XOR encryption.</p>
+                    <a href="https://github.com/Jhashua/arduino-xor-verification" target="_blank" class="text-teal-400 hover:underline">View on GitHub →</a>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <h3 class="text-2xl font-semibold text-teal-300 mb-2">IoT Traffic Analysis</h3>
+                    <p class="text-gray-300 mb-4">Monitoring IoT networks with Wireshark and custom Snort rules to detect anomalies.</p>
+                    <a href="https://github.com/Jhashua/wireshark-snort-iot" target="_blank" class="text-teal-400 hover:underline">View on GitHub →</a>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <h3 class="text-2xl font-semibold text-teal-300 mb-2">RESTful API Academic</h3>
+                    <p class="text-gray-300 mb-4">Node.js & MySQL backend for managing users, roles, courses, and speakers.</p>
+                    <a href="https://github.com/JhashuaC/academic-records-api" target="_blank" class="text-teal-400 hover:underline">View on GitHub →</a>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div>
-        <h3 class="text-teal-300 font-semibold mb-1">Node.js & Backend Development</h3>
-        <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
-          <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="80%" style="width: 0"></div>
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gradient-to-r from-blue-950 via-gray-900 to-blue-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-teal-400 mb-8 text-center">Certifications</h2>
+
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="filter-btn px-4 py-2 bg-teal-400 text-gray-900 font-semibold rounded hover:bg-teal-500 transition" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 bg-gray-700 font-semibold rounded hover:bg-teal-500 transition" data-filter="cyber">Cybersecurity</button>
+                <button class="filter-btn px-4 py-2 bg-gray-700 font-semibold rounded hover:bg-teal-500 transition" data-filter="network">Networking</button>
+                <button class="filter-btn px-4 py-2 bg-gray-700 font-semibold rounded hover:bg-teal-500 transition" data-filter="ai">AI & Automation</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Cybersecurity -->
+                <!-- Cybersecurity -->
+                <div class="project category-cyber group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <img src="img/Google.jpg" alt="AI for Cybersecurity" class="max-h-full max-w-full object-contain cursor-pointer" ondblclick="zoomImage(this.src)" />
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
+                        <h4 class="text-lg font-semibold">Google Cybersecurity</h4>
+                        <a href="https://www.credly.com/badges/bcf03150-6723-4db1-9edc-6a0674373643/public_url" target="_blank" class="underline">View Badge</a>
+                    </div>
+
+
+                </div>
+
+                <div class="project category-cyber group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <img src="img/IBM.jpg" alt="AI for Cybersecurity" class="max-h-full max-w-full object-contain cursor-pointer" ondblclick="zoomImage(this.src)" />
+
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
+                        <h4 class="text-lg font-semibold">IBM Cybersecurity Analyst</h4>
+                        <a href="https://www.credly.com/badges/ff1a0291-580c-4dda-9abd-bee2a501fab1/public_url" target="_blank" class="underline">View Badge</a>
+                    </div>
+                </div>
+
+                <div class="project category-cyber group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <img src="img/CiscoEthicalHacking.jpg" alt="AI for Cybersecurity" class="max-h-full max-w-full object-contain cursor-pointer" ondblclick="zoomImage(this.src)" />
+
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
+                        <h4 class="text-lg font-semibold">Ethical Hacking</h4>
+                        <a href="https://www.credly.com/badges/ad2ec193-758a-4e67-8565-48ada4df6df6/public_url" target="_blank" class="underline text-teal-300">View Badge</a>
+                    </div>
+                </div>
+
+                <div class="project category-cyber group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <img src="img/Mastercard.jpg" alt="AI for Cybersecurity" class="max-h-full max-w-full object-contain cursor-pointer" ondblclick="zoomImage(this.src)" />
+
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
+                        <h4 class="text-lg font-semibold">Mastercard Job Experience</h4>
+                        <a href="certificados/Ciberseguridad/Mastercard.pdf" target="_blank" class="underline">View PDF</a>
+                    </div>
+                </div>
+                <div class="project category-cyber group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <img src="img/Microsoft.jpg" alt="AI for Cybersecurity" class="max-h-full max-w-full object-contain cursor-pointer" ondblclick="zoomImage(this.src)" />
+
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
+                        <h4 class="text-lg font-semibold">Microsoft Cybersecurity</h4>
+                        <a href="https://www.credly.com/badges/09c1abf1-c7e2-4f30-8286-6850d2edf914/public_url" target="_blank" class="underline">View Badge</a>
+                    </div>
+                </div>
+
+
+                <div class="project category-network group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <img src="img/CiscoPath.jpg" alt="AI for Cybersecurity" class="max-h-full max-w-full object-contain cursor-pointer" ondblclick="zoomImage(this.src)" />
+
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
+                        <h4 class="text-lg font-semibold">Cisco Certificate Cybersecurity</h4>
+                        <a href="https://www.credly.com/badges/5baf6daf-76c4-4a36-b3a8-637858ada6b3/public_url" target="_blank" class="underline text-teal-300">View Badge</a>
+                    </div>
+                </div>
+
+                <div class="project category-network group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <img src="img/AkamaiEngineering.jpg" alt="AI for Cybersecurity" class="max-h-full max-w-full object-contain cursor-pointer" ondblclick="zoomImage(this.src)" />
+
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
+                        <h4 class="text-lg font-semibold">Akamai Network Engineering</h4>
+                        <a href="certificados/Redes/AkamaiEngineering.pdf" target="_blank" class="underline text-teal-300">View PDF</a>
+                    </div>
+                </div>
+                <div class="project category-network group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <img src="img/advancedNetwork.jpg" alt="AI for Cybersecurity" class="max-h-full max-w-full object-contain cursor-pointer" ondblclick="zoomImage(this.src)" />
+
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
+                        <h4 class="text-lg font-semibold">Advanced Network Security</h4>
+                        <a href="certificados/Redes/NetworkSecurity.pdf" target="_blank" class="underline text-teal-300">View PDF</a>
+                    </div>
+                </div>
+
+
+                <!-- AI & Automation -->
+                <div class="project category-ai group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <img src="img/IBMGenerativeAI.jpg" alt="AI for Cybersecurity" class="max-h-full max-w-full object-contain cursor-pointer" ondblclick="zoomImage(this.src)" />
+
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
+                        <h4 class="text-lg font-semibold">Generative AI Security</h4>
+                        <a href="https://www.credly.com/badges/f1a86a8e-133a-4c1e-963d-9de47c9f4fc3/public_url" target="_blank" class="underline text-teal-300">View Badge</a>
+                    </div>
+                </div>
+                <div class="project category-ai group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <img src="img/AIForCybersecurity.jpg" alt="AI for Cybersecurity" class="max-h-full max-w-full object-contain cursor-pointer" ondblclick="zoomImage(this.src)" />
+
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition">
+                        <h4 class="text-lg font-semibold">Generative AI Security</h4>
+                        <a href="https://www.credly.com/badges/f1a86a8e-133a-4c1e-963d-9de47c9f4fc3/public_url" target="_blank" class="underline text-teal-300">View Badge</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
         </div>
-      </div>
-
-      <div>
-        <h3 class="text-teal-300 font-semibold mb-1">Networking & Protocols</h3>
-        <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
-          <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="75%" style="width: 0"></div>
         </div>
-      </div>
+    </section>
 
-      <div>
-        <h3 class="text-teal-300 font-semibold mb-1">Python & Scripting</h3>
-        <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
-          <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="70%" style="width: 0"></div>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="text-teal-300 font-semibold mb-1">Embedded Systems (Arduino)</h3>
-        <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
-          <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="75%" style="width: 0"></div>
-        </div>
-      </div>
-<div>
-        <h3 class="text-teal-300 font-semibold mb-1">Logic Circuits </h3>
-        <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
-          <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="75%" style="width: 0"></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- Education & Experience Section -->
-<!-- Education & Experience Section -->
-<section id="timeline" class="py-20 bg-gradient-to-r from-blue-950 via-gray-900 to-blue-950 fade-section">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-4xl font-bold text-teal-400 mb-12 text-center">Education & Experience</h2>
-
-    <div class="relative border-l-4 border-teal-400 pl-8 space-y-14">
-
-      <!-- Universidad Nacional -->
-      <div class="relative ml-4 opacity-0 translate-x-10 transition-all duration-700 timeline-entry">
-        <div class="absolute -left-6 top-1 w-5 h-5 bg-teal-400 rounded-full border-4 border-blue-950"></div>
-        <h3 class="text-2xl text-white font-semibold">Universidad Nacional de Costa Rica</h3>
-        <p class="text-teal-300 font-medium">B.Sc. in Information Systems Engineering – 2022 to Present</p>
-        <p class="text-gray-300 mt-2">
-  Throughout my time at Universidad Nacional de Costa Rica, I have completed core courses in computer science such as Programming in different languages, Data Structures, Computer Architecture, Discrete Structures, and Technical Support. These experiences have strengthened my skills in software development, algorithm design, and understanding computer systems at both hardware and software levels.
-</p>
-  
-        </p>
-      </div>
-
-      <!-- Freelance Developer -->
-      <div class="relative ml-4 opacity-0 translate-x-10 transition-all duration-700 timeline-entry">
-        <div class="absolute -left-6 top-1 w-5 h-5 bg-teal-400 rounded-full border-4 border-blue-950"></div>
-        <h3 class="text-2xl text-white font-semibold">Freelance Developer & Security Enthusiast</h3>
-        <p class="text-teal-300 font-medium">2023 – Present</p>
-        <p class="text-gray-300 mt-2">
-          Developing REST APIs with Node.js and MySQL, Arduino systems with encryption, Logic Circuits projects and applying ethical hacking practices using Kali Linux and Wireshark.
-        </p>
-      </div>
-
-      <!-- Coursera & IBM -->
-      <div class="relative ml-4 opacity-0 translate-x-10 transition-all duration-700 timeline-entry">
-        <div class="absolute -left-6 top-1 w-5 h-5 bg-teal-400 rounded-full border-4 border-blue-950"></div>
-        <h3 class="text-2xl text-white font-semibold">Coursera & Cisco Cybersecurity Path</h3>
-        <p class="text-teal-300 font-medium">2024 – Ongoing</p>
-        <p class="text-gray-300 mt-2">
-          Completed industry-recognized certifications in threat detection, SIEM, OpenVAS, Snort, and AI in cybersecurity from providers like IBM, Google, Microsoft.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- Contact Section -->
-<section id="contact" class="py-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-4xl font-bold text-teal-400 mb-6">Get In Touch</h2>
-    <p class="text-gray-300 mb-8">Feel free to reach out for collaborations, project ideas, or just a friendly hello!</p>
-
-    <div class="space-y-4 text-gray-300">
-      <p><strong>Email:</strong> <a href="mailto:jhashua10@gmail.com" class="text-teal-400 hover:underline">jhashua10@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+50683313168" class="text-teal-400 hover:underline">+50683313168 </a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jhashua-canton" target="_blank" class="text-teal-400 hover:underline">linkedin.com/in/jhashua-canton</a></p>
+    <!-- Lightbox Script -->
+    <div id="certModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+        <span onclick="closeCertificate()" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
+        <iframe id="certFrame" class="w-[90%] h-[85vh] rounded-xl shadow-2xl border-4 border-teal-400 bg-white" frameborder="0"></iframe>
     </div>
 
-    <div class="mt-8">
-      <a href="mailto:jhashua10@gmail.com" class="magnetic-btn bg-teal-400 hover:bg-teal-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition">Say Hello</a>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-r from-gray-900 to-blue-950 fade-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-teal-400 mb-10 text-center">Skills</h2>
+            <div class="space-y-6">
+
+                <div>
+                    <h3 class="text-teal-300 font-semibold mb-1">Cybersecurity</h3>
+                    <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
+                        <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="85%" style="width: 0"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-teal-300 font-semibold mb-1">Node.js & Backend Development</h3>
+                    <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
+                        <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="80%" style="width: 0"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-teal-300 font-semibold mb-1">Networking & Protocols</h3>
+                    <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
+                        <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="75%" style="width: 0"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-teal-300 font-semibold mb-1">Python & Scripting</h3>
+                    <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
+                        <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="70%" style="width: 0"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-teal-300 font-semibold mb-1">Embedded Systems (Arduino)</h3>
+                    <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
+                        <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="75%" style="width: 0"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-teal-300 font-semibold mb-1">Logic Circuits </h3>
+                    <div class="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
+                        <div class="skill-bar bg-teal-400 h-4 rounded-full transition-all duration-1000" data-width="75%" style="width: 0"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Education & Experience Section -->
+    <!-- Education & Experience Section -->
+    <section id="timeline" class="py-20 bg-gradient-to-r from-blue-950 via-gray-900 to-blue-950 fade-section">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-teal-400 mb-12 text-center">Education & Experience</h2>
+
+            <div class="relative border-l-4 border-teal-400 pl-8 space-y-14">
+
+                <!-- Universidad Nacional -->
+                <div class="relative ml-4 opacity-0 translate-x-10 transition-all duration-700 timeline-entry">
+                    <div class="absolute -left-6 top-1 w-5 h-5 bg-teal-400 rounded-full border-4 border-blue-950"></div>
+                    <h3 class="text-2xl text-white font-semibold">Universidad Nacional de Costa Rica</h3>
+                    <p class="text-teal-300 font-medium">B.Sc. in Information Systems Engineering – 2022 to Present</p>
+                    <p class="text-gray-300 mt-2">
+                        Throughout my time at Universidad Nacional de Costa Rica, I have completed core courses in computer science such as Programming in different languages, Data Structures, Computer Architecture, Discrete Structures, and Technical Support. These experiences
+                        have strengthened my skills in software development, algorithm design, and understanding computer systems at both hardware and software levels.
+                    </p>
+
+                    </p>
+                </div>
+
+                <!-- Freelance Developer -->
+                <div class="relative ml-4 opacity-0 translate-x-10 transition-all duration-700 timeline-entry">
+                    <div class="absolute -left-6 top-1 w-5 h-5 bg-teal-400 rounded-full border-4 border-blue-950"></div>
+                    <h3 class="text-2xl text-white font-semibold">Freelance Developer & Security Enthusiast</h3>
+                    <p class="text-teal-300 font-medium">2023 – Present</p>
+                    <p class="text-gray-300 mt-2">
+                        Developing REST APIs with Node.js and MySQL, Arduino systems with encryption, Logic Circuits projects and applying ethical hacking practices using Kali Linux and Wireshark.
+                    </p>
+                </div>
+
+                <!-- Coursera & IBM -->
+                <div class="relative ml-4 opacity-0 translate-x-10 transition-all duration-700 timeline-entry">
+                    <div class="absolute -left-6 top-1 w-5 h-5 bg-teal-400 rounded-full border-4 border-blue-950"></div>
+                    <h3 class="text-2xl text-white font-semibold">Coursera & Cisco Cybersecurity Path</h3>
+                    <p class="text-teal-300 font-medium">2024 – Ongoing</p>
+                    <p class="text-gray-300 mt-2">
+                        Completed industry-recognized certifications in threat detection, SIEM, OpenVAS, Snort, and AI in cybersecurity from providers like IBM, Google, Microsoft.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-teal-400 mb-6">Get In Touch</h2>
+            <p class="text-gray-300 mb-8">Feel free to reach out for collaborations, project ideas, or just a friendly hello!</p>
+
+            <div class="space-y-4 text-gray-300">
+                <p><strong>Email:</strong> <a href="mailto:jhashua10@gmail.com" class="text-teal-400 hover:underline">jhashua10@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+50683313168" class="text-teal-400 hover:underline">+50683313168 </a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jhashua-canton" target="_blank" class="text-teal-400 hover:underline">linkedin.com/in/jhashua-canton</a></p>
+            </div>
+
+            <div class="mt-8">
+                <a href="mailto:jhashua10@gmail.com" class="magnetic-btn bg-teal-400 hover:bg-teal-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition">Say Hello</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900 text-center text-gray-500">
+        © 2025 Jhashua Canton Ruiz
+    </footer>
+    <!-- Modal para imagen ampliada -->
+    <div id="imgZoomModal" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
+        <img id="zoomedImg" class="max-w-3xl max-h-[80vh] rounded-lg shadow-2xl" alt="Zoomed Image" />
     </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="py-6 bg-gray-900 text-center text-gray-500">
-  © 2025 Jhashua Canton Ruiz
-</footer>
-<!-- Modal para imagen ampliada -->
-<div id="imgZoomModal" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
-  <img id="zoomedImg" class="max-w-3xl max-h-[80vh] rounded-lg shadow-2xl" alt="Zoomed Image" />
-</div>
 
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
 
+</html>
