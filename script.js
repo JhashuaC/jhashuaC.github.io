@@ -43,7 +43,7 @@ function closeCertificate() {
 
 document.addEventListener('DOMContentLoaded', () => {
   // Typewriter
-  const roles = ['Cybersecurity Enthusiast', 'Backend Developer', 'IoT Hacker', 'REST API Developer'];
+  const roles = ['Cybersecurity Enthusiast','IA Developer', 'Full Stack Developer', 'Software Engineer', 'Tech Advocate'];	
   let i = 0, j = 0, isDeleting = false;
   const el = document.getElementById('typewriter');
   let current = '';
