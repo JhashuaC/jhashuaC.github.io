@@ -7,6 +7,108 @@
   <title>Jhashua | Portfolio</title>
   <meta name="description" content="Portfolio of Jhashua Canton Ruiz — backend, developer, cybersecurity, AI." />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+ /* ===== Base & Micro-interactions ===== */
+  @keyframes fadeUp { from {opacity:.0; transform: translateY(16px)} to {opacity:1; transform: translateY(0)} }
+  @keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+  @keyframes shine { 0% { transform: translateX(-120%);} 100% { transform: translateX(120%);} }
+
+  /* Fondo con gradiente animado (sutil) */
+  body.has-animated-bg {
+    background: linear-gradient(120deg, #0b1b3f, #0f172a, #052e42, #0b1b3f);
+    background-size: 300% 300%;
+    animation: gradientShift 18s ease-in-out infinite;
+  }
+
+  /* Scroll progress bar */
+  .scroll-progress {
+    position: fixed; top: 0; left: 0; height: 4px; width: 0;
+    background: linear-gradient(90deg, #14b8a6, #38bdf8);
+    z-index: 60; transition: width .15s linear;
+  }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(16px); }
+  .reveal.in { animation: fadeUp .6s cubic-bezier(.22,.9,.31,1) forwards; }
+
+  /* Tilt 3D + glare */
+  .tilt {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(900px) rotateX(0) rotateY(0) translateZ(0);
+    transition: transform .15s ease;
+  }
+  .tilt:hover { will-change: transform; }
+  .tilt .glare {
+    pointer-events: none;
+    position: absolute; inset: 0; border-radius: inherit;
+    mix-blend-mode: screen; opacity: 0;
+    background: radial-gradient(300px 300px at var(--mx,50%) var(--my,50%), rgba(255,255,255,.25), transparent 60%);
+    transition: opacity .15s ease;
+  }
+  .tilt:hover .glare { opacity: .6; }
+
+  /* Shine sobre imágenes en certs */
+  .img-shine { position: relative; overflow: hidden; }
+  .img-shine::after{
+    content:""; position:absolute; inset:0; transform: translateX(-120%) skewX(-20deg);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
+  }
+  .img-shine:hover::after{ animation: shine .9s ease; }
+
+  /* Borde gradiente animado (para destacar cards) */
+  .gradient-frame {
+    position: relative; border-radius: 1rem; isolation: isolate;
+  }
+  .gradient-frame::before {
+    content:""; position:absolute; inset:-1px; border-radius: inherit; z-index:-1;
+    background: conic-gradient(from 180deg at 50% 50%, #14b8a6, #38bdf8, #7c3aed, #14b8a6);
+    filter: blur(6px); opacity:.7; animation: spin 12s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg);} }
+
+  /* Flip 3D para tarjetas (Certifications) */
+  .flip {
+    perspective: 1200px;
+  }
+  .flip-inner {
+    position: relative; transform-style: preserve-3d; transition: transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+  .flip:hover .flip-inner { transform: rotateY(180deg); }
+  .flip-face {
+    backface-visibility: hidden;
+  }
+  .flip-back {
+    transform: rotateY(180deg);
+  }
+
+  /* Hero Starfield canvas capa detrás del contenido */
+  #starfieldCanvas {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    z-index: 0; opacity: .55;
+  }
+  #home .hero-content { position: relative; z-index: 1; }
+
+  /* Blob neón detrás de la foto */
+  .neon-blob {
+    position: absolute; width: 340px; height: 340px; border-radius: 50%;
+    background: radial-gradient(60% 60% at 50% 50%, rgba(20,184,166,.35), transparent 70%),
+                conic-gradient(from 0deg, rgba(56,189,248,.25), rgba(124,58,237,.25), rgba(20,184,166,.25), rgba(56,189,248,.25));
+    filter: blur(18px);
+    animation: blobFloat 14s ease-in-out infinite;
+    z-index: 0;
+  }
+  @keyframes blobFloat {
+    0%,100% { transform: translate(-20px, -10px) scale(1); }
+    50%     { transform: translate(20px, 15px) scale(1.08); }
+  }
+
+  /* Respeta reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
 </head>
 
 <body class="bg-gradient-to-br from-blue-900 to-gray-900 text-white font-sans">
@@ -29,18 +131,20 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
-    <div>
-      <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">
-        Hi, I'm <span class="text-teal-400">Jhashua</span>
-      </h1>
-      <p id="typewriter" class="text-2xl text-teal-300 h-10 mb-6 font-mono"></p>
-      <a href="#contact" class="magnetic-btn bg-teal-400 hover:bg-teal-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition">
-        Get In Touch
-      </a>
-    </div>
-  </section>
+<section id="home" class="relative min-h-screen flex items-center justify-center text-center px-4">
+  <canvas id="starfieldCanvas" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <!-- tu contenido actual del hero -->
+    <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">
+      Hi, I'm <span class="text-teal-400">Jhashua</span>
+    </h1>
+    <p id="typewriter" class="text-2xl text-teal-300 h-10 mb-6 font-mono"></p>
+    <a href="#contact" class="magnetic-btn bg-teal-400 hover:bg-teal-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition">
+      Get In Touch
+    </a>
+  </div>
+</section>
+
 
   <!-- About Me Section -->
   <section id="about" class="py-20 bg-gradient-to-r from-gray-900 to-blue-950 fade-section">
@@ -573,6 +677,172 @@
 
     // Initial: show all and developer first
     showAll();
+     const progressEl = document.getElementById('scrollProgress');
+  function setScrollProgress() {
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+    progressEl.style.width = (scrolled * 100) + '%';
+  }
+  document.addEventListener('scroll', setScrollProgress, { passive: true });
+  setScrollProgress();
+
+  // ===== Reveal + stagger =====
+  const revealEls = Array.from(document.querySelectorAll('.reveal'));
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const parent = entry.target;
+      parent.classList.add('in');
+
+      // Stagger para hijos (cards dentro de grids)
+      const children = parent.querySelectorAll(':scope > .grid > * , :scope > .grid > .group, :scope > .group');
+      children.forEach((c, i) => {
+        c.style.animationDelay = (0.05 * i) + 's';
+        c.classList.add('reveal','in');
+      });
+
+      revealObs.unobserve(parent);
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  // ===== Tilt 3D sutil en tarjetas =====
+  function attachTilt(el) {
+    const max = 8; // grados máximos
+    el.addEventListener('mousemove', (e) => {
+      const r = el.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width;
+      const y = (e.clientY - r.top) / r.height;
+      const rx = (y - 0.5) * -2 * max;
+      const ry = (x - 0.5) *  2 * max;
+      el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(0)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = `perspective(900px) rotateX(0) rotateY(0) translateZ(0)`;
+    });
+  }
+  document.querySelectorAll('.tilt').forEach(attachTilt);
+
+  // ===== Parallax suave en Hero =====
+  const hero = document.getElementById('home');
+  if (hero) {
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      hero.style.backgroundPosition = `${50 + x * 2}% ${50 + y * 2}%`;
+    });
+  }
+
+  // ===== Scrollspy en navbar =====
+  const sections = ['home','about','projects','certifications','skills','timeline','contact','CV']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+  const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+  const spyObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.id;
+      const link = navLinks.find(a => a.getAttribute('href') === `#${id}`);
+      if (!link) return;
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('text-teal-300'));
+        link.classList.add('text-teal-300');
+      }
+    });
+  }, { threshold: 0.5 });
+  sections.forEach(s => spyObs.observe(s));
+
+ (function(){
+    const canvas = document.getElementById('starfieldCanvas');
+    if (!canvas) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const ctx = canvas.getContext('2d');
+    let w, h, cx, cy, stars = [], mouseX = 0, mouseY = 0, motionOK = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function resize(){
+      w = canvas.clientWidth; h = canvas.clientHeight;
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      cx = w/2; cy = h/2;
+      genStars();
+    }
+    function genStars(){
+      const count = Math.floor(Math.min(160, w*h/8000));
+      stars = Array.from({length: count}, () => ({
+        x: (Math.random() - .5) * w * 1.6,
+        y: (Math.random() - .5) * h * 1.6,
+        z: Math.random() * 2 + .5,
+        r: Math.random() * 1.2 + .2,
+        s: Math.random() * .6 + .2
+      }));
+    }
+    function draw(){
+      ctx.clearRect(0,0,w,h);
+      const parX = (mouseX - w/2) / w;
+      const parY = (mouseY - h/2) / h;
+      for (const st of stars){
+        const x = cx + st.x / st.z + (parX * 25);
+        const y = cy + st.y / st.z + (parY * 25);
+        const alpha = Math.max(.2, 1.4 - st.z);
+        ctx.globalAlpha = alpha;
+        ctx.beginPath();
+        ctx.arc(x,y, st.r, 0, Math.PI*2);
+        ctx.fillStyle = '#a7f3d0'; // teal-200
+        ctx.fill();
+        // trail
+        ctx.globalAlpha = alpha * .35;
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x - parX*16, y - parY*16);
+        ctx.strokeStyle = '#67e8f9'; // cyan-300
+        ctx.lineWidth = st.s;
+        ctx.stroke();
+        // z depth
+        st.z -= 0.003 + st.s*0.0015;
+        if (st.z < 0.5) st.z = Math.random()*2 + 1.4;
+      }
+      ctx.globalAlpha = 1;
+      motionOK && requestAnimationFrame(draw);
+    }
+    window.addEventListener('resize', resize);
+    window.addEventListener('mousemove', (e)=>{ mouseX = e.clientX; mouseY = e.clientY; }, {passive:true});
+    resize(); motionOK && draw();
+  })();
+
+  // ===== Tilt con glare (usa .tilt + .glare) =====
+  (function(){
+    const max = 10;
+    document.querySelectorAll('.tilt').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
+        const rx = (y - 0.5) * -2 * max;
+        const ry = (x - 0.5) *  2 * max;
+        el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(0)`;
+        const glare = el.querySelector('.glare');
+        if (glare){ glare.style.setProperty('--mx', (x*100)+'%'); glare.style.setProperty('--my', (y*100)+'%'); }
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = `perspective(900px) rotateX(0) rotateY(0) translateZ(0)`;
+      });
+    });
+  })();
+
+  // ===== Scroll progress (si no lo tenías en DOM, ahora existe) =====
+  (function(){
+    const progressEl = document.getElementById('scrollProgress');
+    if (!progressEl) return;
+    function setScrollProgress() {
+      const h = document.documentElement;
+      const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+      progressEl.style.width = (scrolled * 100) + '%';
+    }
+    document.addEventListener('scroll', setScrollProgress, { passive: true });
+    setScrollProgress();
+  })();
+
+
   </script>
 
  
