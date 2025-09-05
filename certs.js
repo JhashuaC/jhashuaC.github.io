@@ -122,7 +122,8 @@
       issuer: "Mastercard",
       category: "cyber",
       skills: ["Threat Intel", "Risk"],
-      verify: "certificados/Ciberseguridad/Mastercard.pdf",
+      verify:
+        "https://github.com/JhashuaC/jhashuaC.github.io/blob/main/certificados/Ciberseguridad/mastercard.pdf",
       image: "img/Mastercard.jpg",
       issued: "",
     },
@@ -153,7 +154,8 @@
       issuer: "Akamai",
       category: "network",
       skills: ["CDN", "Edge"],
-      verify: "certificados/Redes/AkamaiEngineering.pdf",
+      verify:
+        "https://www.coursera.org/account/accomplishments/professional-cert/5OPQ6YGITFFR",
       image: "img/AkamaiEngineering.jpg",
       issued: "",
     },
@@ -162,7 +164,8 @@
       issuer: "",
       category: "network",
       skills: ["Firewalls", "IDS/IPS"],
-      verify: "certificados/Redes/NetworkSecurity.pdf",
+      verify:
+        "https://github.com/JhashuaC/jhashuaC.github.io/blob/main/certificados/Redes/NetworkSecurity.pdf",
       image: "img/advancedNetwork.jpg",
       issued: "",
     },
