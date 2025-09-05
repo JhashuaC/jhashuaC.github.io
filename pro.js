@@ -177,6 +177,65 @@
     new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]"));
   const saveFavs = (set) =>
     localStorage.setItem(FAVORITES_KEY, JSON.stringify(Array.from(set)));
+  // --- Animadores para slide/opacity ---
+  function expandEl(el, ms = 260) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.style.height = "auto";
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+      return;
+    }
+    el.style.willChange = "height, opacity, transform";
+    el.style.overflow = "hidden";
+    el.style.opacity = "0";
+    el.style.transform = "translateY(-4px)";
+    el.style.height = "0px";
+
+    // medir y animar
+    const end = el.scrollHeight;
+    // fuerza reflow
+    el.getBoundingClientRect();
+    el.style.transition = `height ${ms}ms cubic-bezier(.2,.8,.2,1), opacity ${ms}ms ease, transform ${ms}ms ease`;
+    el.style.opacity = "1";
+    el.style.transform = "translateY(0)";
+    el.style.height = end + "px";
+
+    const done = (e) => {
+      if (e.propertyName !== "height") return;
+      el.style.transition = "";
+      el.style.height = "auto"; // para que crezca si el contenido cambia
+      el.style.willChange = "";
+      el.removeEventListener("transitionend", done);
+    };
+    el.addEventListener("transitionend", done);
+  }
+
+  function collapseEl(el, ms = 220) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.style.height = "0px";
+      el.style.opacity = "0";
+      el.style.transform = "translateY(-4px)";
+      return;
+    }
+    el.style.willChange = "height, opacity, transform";
+    el.style.overflow = "hidden";
+    // desde altura actual
+    el.style.height = el.scrollHeight + "px";
+    // reflow
+    el.getBoundingClientRect();
+    el.style.transition = `height ${ms}ms cubic-bezier(.2,.8,.2,1), opacity ${ms}ms ease, transform ${ms}ms ease`;
+    el.style.opacity = "0";
+    el.style.transform = "translateY(-4px)";
+    el.style.height = "0px";
+
+    const done = (e) => {
+      if (e.propertyName !== "height") return;
+      el.style.transition = "";
+      el.style.willChange = "";
+      el.removeEventListener("transitionend", done);
+    };
+    el.addEventListener("transitionend", done);
+  }
 
   /* 4.2 Render cards (sin imágenes) */
   (function renderProjects() {
@@ -287,18 +346,21 @@
         tags.appendChild(chip);
       });
 
-      // Inline details (expand/collapse)
-      const details = el(
-        "div",
-        "hidden mt-2 text-sm text-slate-300 leading-relaxed"
-      );
+      // Inline details (expand/collapse con animación)
+      const details = el("div", "mt-2 text-sm text-slate-300 leading-relaxed");
       details.innerHTML = `
-        <ul class="list-disc list-inside space-y-1">
-          <li><strong>Focus:</strong> ${p.tags.join(" • ")}</li>
-          <li><strong>Highlights:</strong> Clean architecture, error handling, docs.</li>
-          <li><strong>Role:</strong> Design & implementation end-to-end.</li>
-        </ul>
-      `;
+  <ul class="list-disc list-inside space-y-1">
+    <li><strong>Focus:</strong> ${p.tags.join(" • ")}</li>
+    <li><strong>Highlights:</strong> Clean architecture, error handling, docs.</li>
+    <li><strong>Role:</strong> Design & implementation end-to-end.</li>
+  </ul>
+`;
+      // estado inicial colapsado
+      details.style.height = "0px";
+      details.style.opacity = "0";
+      details.style.transform = "translateY(-4px)";
+      details.dataset.open = "0";
+
       const toggleBtn = el(
         "button",
         "px-3 py-1.5 rounded bg-slate-700 hover:bg-slate-600 text-sm",
@@ -354,11 +416,17 @@
 
       return card;
     }
-
     function toggleDetails(details, btn) {
-      const open = details.classList.contains("hidden");
-      details.classList.toggle("hidden");
-      btn.textContent = open ? "Hide details" : "Details";
+      const isOpen = details.dataset.open === "1";
+      if (isOpen) {
+        collapseEl(details);
+        details.dataset.open = "0";
+        btn.textContent = "Details";
+      } else {
+        expandEl(details);
+        details.dataset.open = "1";
+        btn.textContent = "Hide details";
+      }
     }
 
     function pickEmoji(tags) {
