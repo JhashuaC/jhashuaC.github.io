@@ -177,7 +177,7 @@
       category: "ai",
       skills: ["GenAI", "Security"],
       verify:
-        "https://www.credly.com/badges/f1a86a8e-133a-4c1e-963d-9de47c9f4fc3/public_url",
+        "https://www.credly.com/badges/afac117c-b829-457a-b737-88f7cec7ec69/public_url",
       image: "img/IBMGenerativeAI.jpg",
       issued: "",
     },
@@ -187,7 +187,7 @@
       category: "ai",
       skills: ["ML", "MLOps"],
       verify:
-        "https://www.credly.com/badges/f1a86a8e-133a-4c1e-963d-9de47c9f4fc3/public_url",
+        "https://www.credly.com/badges/5c58d405-b9b6-4d78-9d1d-6ca59c40463b/public_url",
       image: "img/IA.jpg",
       issued: "",
     },
